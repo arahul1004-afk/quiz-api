@@ -4,7 +4,7 @@ from flask import request, jsonify
 import google.generativeai as genai
 import json
 
-# app = Flask(_name_)
+# app = Flask(_name_)`
 
 # 1. SECURITY: Load API key from environment variable
 # Run this in terminal before starting app: export GOOGLE_API_KEY="your_actual_key"
@@ -26,7 +26,7 @@ def generate_quiz(request):
     # unit = data.get('unit')
     num = data.get('num')
 
-    if not subject or not unit or not num:
+    if not num:
         return jsonify({'error': 'Missing required fields'}), 400
 
     try:
